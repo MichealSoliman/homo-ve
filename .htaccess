@@ -1,0 +1,159 @@
+# =========================
+# 1. صفحة الخطأ المخصصة
+# =========================
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# =========================
+# 2. Force HTTPS + Non-WWW
+# =========================
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://homo-ve.com%{REQUEST_URI} [R=301,L]
+
+# =========================
+# 3. حذف .html من الروابط
+# =========================
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+?)\.html$ /$1 [R=301,L]
+
+# =========================
+# 4. Redirect Old URLs → New Structure
+# =========================
+RewriteRule ^moving-home-furniture/?$ /services/moving-home-furniture/ [R=301,L]
+RewriteRule ^furniture-disassembly-assembly/?$ /services/furniture-disassembly-assembly/ [R=301,L]
+RewriteRule ^skilled-technical-labor/?$ /services/skilled-technical-labor/ [R=301,L]
+RewriteRule ^office-furniture-moving/?$ /services/moving-office-furniture/ [R=301,L]
+
+RewriteRule ^moving/?$ /service-areas/ [R=301,L]
+RewriteRule ^moving/al-narjis/?$ /service-areas/al-narjis/ [R=301,L]
+
+# =========================
+# 5. حذف index.html
+# =========================
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# =========================
+# 6. تشغيل الصفحات بدون .html
+# =========================
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+</IfModule>
+
+# =========================
+# 7. Browser Caching (Enhanced)
+# =========================
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+
+ExpiresByType text/html "access plus 1 hour"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType application/x-javascript "access plus 1 year"
+
+# Fonts - Long Cache
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType font/ttf "access plus 1 year"
+ExpiresByType font/otf "access plus 1 year"
+ExpiresByType application/font-woff2 "access plus 1 year"
+ExpiresByType application/font-woff "access plus 1 year"
+
+# Images
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType text/x-icon "access plus 1 year"
+
+# XML / JSON
+ExpiresByType application/json "access plus 1 hour"
+ExpiresByType text/xml "access plus 1 hour"
+ExpiresByType application/xml "access plus 1 hour"
+</IfModule>
+
+# =========================
+# 8. Cache-Control Headers
+# =========================
+<IfModule mod_headers.c>
+# Fonts - Immutable
+<FilesMatch "\.(woff2|woff|ttf|otf|eot)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Images - Immutable
+<FilesMatch "\.(webp|png|jpg|jpeg|gif|svg|ico)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# CSS/JS - Long cache
+<FilesMatch "\.(css|js)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# HTML - Short cache with revalidation
+<FilesMatch "\.(html|htm)$">
+  Header set Cache-Control "public, max-age=3600, must-revalidate"
+</FilesMatch>
+
+# Security Headers (also improves performance)
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Keep-Alive
+Header set Connection keep-alive
+</IfModule>
+
+# =========================
+# 9. GZIP Compression (Enhanced)
+# =========================
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE application/font-woff
+AddOutputFilterByType DEFLATE application/font-woff2
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+
+# Compress level
+DeflateCompressionLevel 9
+</IfModule>
+
+# =========================
+# 10. ETag (Remove for static assets - rely on Cache-Control)
+# =========================
+<IfModule mod_headers.c>
+<FilesMatch "\.(webp|png|jpg|jpeg|gif|svg|ico|woff2|woff|ttf|css|js)$">
+  Header unset ETag
+</FilesMatch>
+</IfModule>
+FileETag None
+
+# =========================
+# 11. Vary Header for proper caching
+# =========================
+<IfModule mod_headers.c>
+<FilesMatch "\.(css|js|html)$">
+  Header append Vary: Accept-Encoding
+</FilesMatch>
+</IfModule>

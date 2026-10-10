@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://homo-ve.com/sitemap.xml
