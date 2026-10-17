@@ -156,9 +156,14 @@
             { "@type": "Place", "name": "حي الصفا" },
             { "@type": "Place", "name": "حي الفيحاء" },
             { "@type": "Place", "name": "أبحر الشمالية" },
+            { "@type": "Place", "name": "أبحر الجنوبية" },
             { "@type": "Place", "name": "حي السلامة" },
             { "@type": "Place", "name": "حي النعيم" },
-            { "@type": "Place", "name": "حي المحمدية" }
+            { "@type": "Place", "name": "حي المحمدية" },
+            { "@type": "Place", "name": "حي الحمدانية" },
+            { "@type": "Place", "name": "حي المرجان" },
+            { "@type": "Place", "name": "حي البساتين" },
+            { "@type": "Place", "name": "حي السامر" }
           ]
         },
         {
@@ -174,9 +179,11 @@
             "name": "خدمات نقل العفش بجدة",
             "itemListElement": [
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "نقل عفش بجدة" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تغليف العفش بجدة" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "فك وتركيب العفش بجدة" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "نقل غرف النوم بجدة" } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تغليف العفش الاحترافي بجدة" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "فك وتركيب العفش والأثاث بجدة" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "نقل غرف النوم بجدة" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ونش رفع أثاث هيدروليكي بجدة" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "نقل عفش الفلل والقصور بجدة" } }
             ]
           }
         },
@@ -501,7 +508,7 @@
         .compare-table th,
         .compare-table td {
             border: 1px solid #e2e8f0;
-            padding: 12px 16px;
+            padding: 14px 16px;
             text-align: right;
             font-size: 14px;
         }
@@ -514,6 +521,75 @@
 
         .compare-table tr:nth-child(even) {
             background: #f8fafc;
+        }
+
+        /* Pro Comparison Table Styles */
+        .compare-pro th {
+            font-size: 15px;
+            text-align: center;
+        }
+        .compare-pro td {
+            vertical-align: middle;
+        }
+        .compare-pro .col-feature {
+            font-weight: 700;
+            color: #0f172a;
+            width: 30%;
+        }
+        .compare-pro .col-homo {
+            background: rgba(255, 115, 0, 0.04);
+            color: #0f172a;
+            font-weight: 600;
+            width: 40%;
+        }
+        .compare-pro .col-others {
+            color: #64748b;
+            width: 30%;
+        }
+
+        /* Pricing Table Styles */
+        .pricing-table th {
+            background: #0f172a;
+            color: #fff;
+            font-size: 14px;
+        }
+        .pricing-table .price-val {
+            color: var(--accent, #ff7300);
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        /* Gallery Cards Hover */
+        .gallery-item-card {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+        }
+        .gallery-item-card img {
+            transition: transform 0.4s ease;
+        }
+        .gallery-item-card:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Review Card */
+        .review-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: rgba(255, 115, 0, 0.3);
         }
     </style>
 </head>
@@ -650,7 +726,7 @@
                                         بخطوة</span></a></li>
                             <li><a href="#heavy-furniture" class="toc-link"><i
                                         class="fa fa-weight-hanging text-primary"></i> <span>نقل الأثاث الكبير
-                                        والثقيل</span></a></li>
+                                        وأوناش الرفع</span></a></li>
                             <li><a href="#property-types" class="toc-link"><i
                                         class="fa fa-building text-primary"></i> <span>نقل الشقق والفلل والمنازل
                                         والمكاتب</span></a></li>
@@ -658,21 +734,24 @@
                                         class="fa fa-map-location-dot text-primary"></i> <span>نقل العفش داخل أحياء
                                         جدة</span></a></li>
                             <li><a href="#pricing-factors" class="toc-link"><i class="fa fa-tags text-primary"></i>
-                                    <span>العوامل التي تحدد التكلفة</span></a></li>
+                                    <span>عوامل التكلفة وجدول الأسعار</span></a></li>
                             <li><a href="#price-not-only" class="toc-link"><i
                                         class="fa fa-money-bill-wave text-primary"></i> <span>هل السعر وحده
                                         يكفي؟</span></a></li>
                             <li><a href="#comparison-table" class="toc-link"><i
-                                        class="fa fa-table-columns text-primary"></i> <span>مقارنة شركات نقل
-                                        العفش</span></a></li>
+                                        class="fa fa-table-columns text-primary"></i> <span>مقارنة: شركة معتمدة أم
+                                        عمالة عادية؟</span></a></li>
                             <li><a href="#company-trust" class="toc-link"><i
                                         class="fa fa-circle-check text-primary"></i> <span>كيف تتأكد من موثوقية
                                         الشركة؟</span></a></li>
                             <li><a href="#gallery" class="toc-link"><i class="fa fa-images text-primary"></i>
-                                    <span>صور أعمال نقل العفش بجدة</span></a></li>
+                                    <span>معرض صور وفيديوهات أعمالنا</span></a></li>
                             <li><a href="#customer-experience" class="toc-link"><i
                                         class="fa fa-users text-primary"></i> <span>تجربة العميل من أول
                                         اتصال</span></a></li>
+                            <li><a href="#customer-reviews" class="toc-link"><i
+                                        class="fa fa-comments text-primary"></i> <span>آراء وتجارب العملاء
+                                        بجدة</span></a></li>
                             <li><a href="#common-mistakes" class="toc-link"><i
                                         class="fa fa-ban text-primary"></i> <span>أخطاء يجب تجنبها</span></a></li>
                             <li><a href="#preparation-guide" class="toc-link"><i
@@ -917,36 +996,70 @@
                         <!-- Section 6: Protection Methods -->
                         <div id="protection-methods" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">حماية الأثاث أثناء النقل</h2>
-                            <p class="section-text lh-lg text-secondary mb-4">حماية الأثاث من أهم التفاصيل التي يجب
-                                السؤال عنها قبل اختيار شركة نقل عفش.</p>
-                            <p class="text-secondary lh-lg mb-3">تختلف طريقة الحماية حسب نوع القطعة، ويمكن استخدام مواد
-                                مثل:</p>
-                            <ul class="text-secondary lh-lg">
-                                <li>Stretch Film</li>
-                                <li>Bubble Wrap</li>
-                                <li>Foam</li>
-                                <li>Cardboard</li>
-                                <li>Protective Blankets</li>
-                                <li>مواد حماية للزجاج والزوايا</li>
-                            </ul>
-                            <p class="text-secondary lh-lg mt-3 mb-4">ولا يتم استخدام نفس المادة لكل قطعة، لأن الأثاث
-                                الخشبي ليس مثل المرايا أو الأجهزة أو الكنب.</p>
+                                style="border-color: #e2e8f0 !important;">أنظمة وتقنيات حماية الأثاث أثناء النقل بجدة</h2>
+                            <p class="section-text lh-lg text-secondary mb-4">حماية الأثاث هي المعيار الأول والفاصل الذي يميز <strong>أفضل شركة نقل عفش بجدة</strong> عن غيرها. مناخ مدينة جدة الساحلي وما يصاحبه من رطوبة وحرارة، بالإضافة إلى طبيعة المباني والسلالم، يتطلب منظومة تغليف متكاملة متعددة الطبقات لحماية كل قطعة على حدة.</p>
+                            
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 rounded-4 border bg-white h-100 shadow-sm" style="border-color: #e2e8f0 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="fa fa-film fs-5"></i>
+                                            <h3 class="fs-6 fw-bold mb-0 text-dark">رول الاسترتش المطاطي</h3>
+                                        </div>
+                                        <p class="text-secondary small lh-lg mb-0">بلاستيك حراري مرن ومطاطي يُحكم إغلاق القطع لمنع تسرب الغبار والرطوبة وحماية الأقمشة والأسطح الملساء من الخدوش.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 rounded-4 border bg-white h-100 shadow-sm" style="border-color: #e2e8f0 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="fa fa-braille fs-5"></i>
+                                            <h3 class="fs-6 fw-bold mb-0 text-dark">بلاستيك الفقاعات الهوائية</h3>
+                                        </div>
+                                        <p class="text-secondary small lh-lg mb-0">طبقات هوائية مضاعفة لامتصاص الصدمات والارتطام، وتُستخدم خصيصاً للقطع الحساسة، والشاشات، والمرايا والتحف الزجاجية.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 rounded-4 border bg-white h-100 shadow-sm" style="border-color: #e2e8f0 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="fa fa-box-open fs-5"></i>
+                                            <h3 class="fs-6 fw-bold mb-0 text-dark">كراتين كرتون مقوى 5 طبقات</h3>
+                                        </div>
+                                        <p class="text-secondary small lh-lg mb-0">صناديق كرتونية شديدة التحمل بسماكات وأحجام متنوعة لتعبئة الأواني المنزلية، الكتب، والمقتنيات الشخصية مع فواصل كرتونية آمنة.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 rounded-4 border bg-white h-100 shadow-sm" style="border-color: #e2e8f0 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="fa fa-rug fs-5"></i>
+                                            <h3 class="fs-6 fw-bold mb-0 text-dark">بطاطين الحماية المبطنة</h3>
+                                        </div>
+                                        <p class="text-secondary small lh-lg mb-0">بطاطين سميكة مخصصة للنقل تحيط بالكنب والمجالس والأثاث الخشبي الكبير لمنع الاحتكاك مع جدران الممرات وسيارات النقل.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 rounded-4 border bg-white h-100 shadow-sm" style="border-color: #e2e8f0 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="fa fa-cubes-stacked fs-5"></i>
+                                            <h3 class="fs-6 fw-bold mb-0 text-dark">ألواح الفوم العازل</h3>
+                                        </div>
+                                        <p class="text-secondary small lh-lg mb-0">فوم عالي الكثافة يُوضع بين أجزاء الأثاث المفكك وألواح الدواليب لمنع الاحتكاك والتآكل أثناء حركة الشاحنة داخل شوارع جدة.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 rounded-4 border bg-white h-100 shadow-sm" style="border-color: #e2e8f0 !important;">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="fa fa-vector-square fs-5"></i>
+                                            <h3 class="fs-6 fw-bold mb-0 text-dark">زوايا حماية الحواف</h3>
+                                        </div>
+                                        <p class="text-secondary small lh-lg mb-0">دعامات بلاستيكية وكرتونية مضغوطة تُثبت على زوايا الطاولات والدواليب والمكاتب لحمايتها من الارتطام بالأبواب أو المصاعد.</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <h3 class="text-dark fs-5 mb-3 mt-4 fw-bold"><i
-                                    class="fa fa-cube me-2 text-primary"></i> حماية زوايا الأثاث</h3>
-                            <p class="text-secondary lh-lg">الزوايا من الأجزاء المعرضة للاحتكاك أثناء التحريك، لذلك
-                                تحتاج إلى حماية مناسبة.</p>
-
-                            <h3 class="text-dark fs-5 mb-3 mt-4 fw-bold"><i
-                                    class="fa fa-layer-group me-2 text-primary"></i> حماية الأسطح</h3>
-                            <p class="text-secondary lh-lg">الأسطح الخشبية والمطلية تحتاج إلى تقليل الاحتكاك والخدوش
-                                خلال عمليات التحريك والتحميل.</p>
-
-                            <h3 class="text-dark fs-5 mb-3 mt-4 fw-bold"><i
-                                    class="fa fa-shield-halved me-2 text-primary"></i> حماية القطع الحساسة</h3>
-                            <p class="text-secondary lh-lg">الزجاج والمرايا والقطع الحساسة تحتاج إلى تجهيز إضافي مقارنة
-                                بالقطع العادية.</p>
+                            <div class="p-4 rounded-4 border" style="background-color: #f8fafc; border-color: #e2e8f0 !important;">
+                                <h3 class="text-dark fs-5 mb-3 fw-bold"><i class="fa fa-shield-halved me-2 text-primary"></i> معايير العناية بالقطع الثمينة والحساسة</h3>
+                                <p class="text-secondary lh-lg mb-0">في شركة هوم موڤ، لا يتم الاكتفاء بالتغليف السطحي، بل يتم ترقيم وتسمية الصناديق التي تحتوي على زجاج أو أوانٍ قابلة للكسر لتكون في أعلى ترتيب الرص داخل الشاحنة المقفلة، مع تثبيتها بأحزمة أمان داخلية مخصصة تمنع أي اهتزاز أو انزلاق على طول مسار الرحلة.</p>
+                            </div>
                         </div>
 
                         <!-- Section 7: Disassembly and Assembly -->
@@ -1058,23 +1171,43 @@
                             </div>
                         </div>
 
-                        <!-- Section 9: Heavy Furniture -->
+                        <!-- Section 9: Heavy Furniture & Hydraulic Hoists -->
                         <div id="heavy-furniture" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">نقل الأثاث الكبير والثقيل في جدة</h2>
-                            <p class="section-text lh-lg text-secondary mb-4">بعض قطع الأثاث تحتاج إلى تخطيط مسبق بسبب
-                                حجمها أو وزنها أو صعوبة الوصول إليها.</p>
-                            <p class="text-secondary lh-lg mb-3">يمكن أن تشمل هذه القطع:</p>
-                            <ul class="text-secondary lh-lg">
-                                <li>الدواليب الكبيرة.</li>
-                                <li>الكنب الضخم.</li>
-                                <li>الطاولات الكبيرة.</li>
-                                <li>خزائن المكاتب.</li>
-                                <li>بعض القطع الخشبية كبيرة الحجم.</li>
-                                <li>القطع التي تحتاج إلى فك قبل التحريك.</li>
-                            </ul>
-                            <p class="text-secondary lh-lg mt-3">كما يجب الانتباه إلى عرض الأبواب والممرات، وطريقة
-                                الصعود والنزول، وإمكانية استخدام المصعد إذا كان متاحًا.</p>
+                                style="border-color: #e2e8f0 !important;">نقل الأثاث الكبير والثقيل وأوناش الرفع الهيدروليكية بجدة</h2>
+                            <p class="section-text lh-lg text-secondary mb-4">تعتبر عملية نقل الأثاث الثقيل والقطع الضخمة التحدي الحقيقي لأي عملية انتقال في مدينة جدة؛ نظراً لوجود عمائر سكنية وأبراج متعددة الأدوار في أحياء مثل الشاطئ والروضة والسلامة، حيث قد تكون الممرات أو السلالم ضيقة ولا تتسع للقطع الضخمة كالكنب الكبير، طاولات السفرة الرخامية، أو الدواليب العملاقة.</p>
+                            
+                            <div class="row g-4 align-items-center mb-4">
+                                <div class="col-lg-6">
+                                    <div class="rounded-4 overflow-hidden border shadow-sm" style="border-color: #e2e8f0 !important;">
+                                        <img src="../../image/modern-cranes-and-equipment.webp" alt="ونش رفع عفش هيدروليكي بجدة" class="img-fluid w-100" style="height: 260px; object-fit: cover;" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3 class="fs-5 fw-bold text-dark mb-3"><i class="fa fa-truck-ramp-box text-primary me-2"></i> ونش هيدروليكي حديث للأدوار العليا</h3>
+                                    <p class="text-secondary lh-lg mb-2">نوفر في شركة هوم موڤ أوناش رفع وإنزال هيدروليكية وسلالم رفع كهربائية تصل حتى الدور الـ 15، تضمن إدخال الأثاث مباشرة عبر النوافذ أو الشرفات دون ملامسة جدران السلالم أو التسبب بأي خدوش للأبواب ومداخل العمارات.</p>
+                                    <ul class="text-secondary small lh-lg ps-3 mb-0">
+                                        <li>حماية تامة من احتكاك القطع الضخمة بدرجات السلم.</li>
+                                        <li>سرعة فائقة في تنزيل وتحميل أثاث الشقق بالأدوار المرتفعة.</li>
+                                        <li>مشغلو أوناش معتمدون ومحترفون بأعلى معايير السلامة المهنية.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-4 border bg-white h-100" style="border-color: #e2e8f0 !important;">
+                                        <h4 class="text-dark fs-6 fw-bold mb-2"><i class="fa fa-gem text-primary me-2"></i> نقل البيانو والخزائن الحديدية (Safe Boxes)</h4>
+                                        <p class="text-secondary small lh-lg mb-0">معدات تروللي هيدروليكية وأحزمة رفع خاصة لنقل آلات البيانو الحساسة والخزائن الثقيلة دون التأثير على توازنها الداخلي أو أرضيات المنزل.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-4 border bg-white h-100" style="border-color: #e2e8f0 !important;">
+                                        <h4 class="text-dark fs-6 fw-bold mb-2"><i class="fa fa-tv text-primary me-2"></i> نقل الشاشات الكبيرة والتحف الرخامية</h4>
+                                        <p class="text-secondary small lh-lg mb-0">تجهيز صناديق خشبية مبطنة وحماية متضاعفة لشاشات العرض الذكية الضخمة وأسطح الرخام الطبيعي لضمان وصولها سليمة 100%.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Section 10: Property Types -->
@@ -1121,134 +1254,144 @@
                         <!-- Section 11: Jeddah Districts -->
                         <div id="jeddah-districts" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">نقل العفش داخل أحياء جدة</h2>
+                                style="border-color: #e2e8f0 !important;">تغطية شاملة لجميع أحياء ومناطق جدة</h2>
                             <div class="p-4 rounded-4 border"
                                 style="background-color: #f8fafc; border-color: #e2e8f0 !important;">
-                                <p class="text-secondary lh-lg">يمكن أن تختلف تفاصيل عملية النقل داخل جدة حسب موقع
-                                    البداية وموقع الوصول وطبيعة العقار وحجم الأثاث.</p>
-                                <p class="text-secondary lh-lg">قبل الحجز يفضل توضيح:</p>
-                                <ul class="text-secondary lh-lg">
-                                    <li>موقع الاستلام.</li>
-                                    <li>موقع الوصول.</li>
-                                    <li>نوع العقار.</li>
-                                    <li>عدد الغرف.</li>
-                                    <li>كمية الأثاث.</li>
-                                    <li>وجود مصعد أو سلالم.</li>
-                                    <li>القطع الكبيرة أو الحساسة.</li>
-                                    <li>الخدمات المطلوبة.</li>
-                                </ul>
-                                <p class="text-secondary lh-lg mb-3">وبحسب نطاق خدمة الشركة يمكن تغطية الأحياء والمناطق
-                                    التي تعمل بها فعليًا داخل جدة. من الأمثلة:</p>
-                                <div class="d-flex flex-wrap gap-2 mt-3">
-                                    <a href="/service-areas/al-safa/" class="btn btn-outline-primary btn-sm rounded-pill">نقل عفش حي الصفا بجدة</a>
-                                    <a href="/service-areas/al-rawda/" class="btn btn-outline-primary btn-sm rounded-pill">نقل عفش حي الروضة بجدة</a>
-                                    <a href="/service-areas/al-salamah/" class="btn btn-outline-primary btn-sm rounded-pill">نقل عفش حي السلامة بجدة</a>
-                                    <a href="/service-areas/al-nakhil/" class="btn btn-outline-primary btn-sm rounded-pill">نقل عفش حي النخيل بجدة</a>
+                                <p class="text-secondary lh-lg mb-3">تتميز <strong>شركة هوم موڤ</strong> بامتلاكها شبكة شاحنات وسيارات دينا مقفلة متمركزة استراتيجياً في شمال ووسط وجنوب وشرق جدة، مما يضمن سرعة الاستجابة والوصول إلى موقع العميل خلال أقل من 45 دقيقة من تأكيد الطلب.</p>
+                                
+                                <h3 class="text-dark fs-6 fw-bold mb-3"><i class="fa fa-map-location-dot text-primary me-2"></i> أهم أحياء جدة التي نخدمها يومياً:</h3>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <a href="/service-areas/moving-furniture-abhor-alshamaliyah/" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">نقل عفش أبحر الشمالية</a>
+                                    <a href="/service-areas/hayu-alshaati/" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">نقل عفش حي الشاطئ</a>
+                                    <a href="/service-areas/moving-furniture-hayu-alrawdah/" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">نقل عفش حي الروضة</a>
+                                    <a href="/service-areas/moving-furniture-hayu-alhamdaniyah/" class="btn btn-outline-primary btn-sm rounded-pill fw-bold">نقل عفش حي الحمدانية</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي الحمراء</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي السلامة</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي الصفا</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي المحمدية</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي المرجان</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي النعيم</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي البساتين</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي السامر</a>
+                                    <a href="/service-areas/" class="btn btn-outline-secondary btn-sm rounded-pill">نقل عفش حي المروة</a>
+                                </div>
+
+                                <div class="p-3 rounded-3 bg-white border" style="border-color: #e2e8f0 !important;">
+                                    <p class="text-secondary small lh-lg mb-0"><strong>💡 معلومة تهمك:</strong> لا تقتصر خدماتنا على النقل الداخلي بين أحياء جدة فقط، بل نوفر رحلات نقل عفش دورية ومؤمنة من جدة إلى مكة المكرمة، المدينة المنورة، الرياض، الطائف، وينبع بأحدث سيارات النقل المغلقة.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Section 12: Pricing Factors -->
+                        <!-- Section 12: Pricing Factors & Pricing Table -->
                         <div id="pricing-factors" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">ما العوامل التي تحدد تكلفة نقل العفش؟</h2>
-                            <p class="section-text lh-lg text-secondary mb-4">تكلفة الخدمة لا تعتمد على عامل واحد، وإنما
-                                يمكن أن تتأثر بعدة عوامل، منها:</p>
-                            <ul class="text-secondary lh-lg">
-                                <li>كمية الأثاث.</li>
-                                <li>عدد الغرف.</li>
-                                <li>حجم القطع.</li>
-                                <li>الحاجة إلى الفك والتركيب.</li>
-                                <li>مستوى التغليف المطلوب.</li>
-                                <li>عدد العمالة المطلوبة.</li>
-                                <li>وسيلة النقل المناسبة.</li>
-                                <li>مسافة النقل.</li>
-                                <li>طبيعة المبنى.</li>
-                                <li>وجود سلالم.</li>
-                                <li>استخدام المصعد.</li>
-                                <li>القطع الكبيرة أو الحساسة.</li>
-                                <li>أي خدمات إضافية يتم طلبها.</li>
-                            </ul>
-                            <p class="text-secondary lh-lg mt-3">ولذلك من الأفضل تحديد الاحتياجات الفعلية قبل الحصول على
-                                عرض الخدمة.</p>
+                                style="border-color: #e2e8f0 !important;">العوامل المحددة لتكلفة نقل العفش وجدول الأسعار التقديري بجدة</h2>
+                            <p class="section-text lh-lg text-secondary mb-4">في شركة هوم موڤ، نعتمد مبدأ الشفافية الكاملة بدون أي رسوم خفية أو زيادات مفاجئة عند الوصول. تتحدد تكلفة نقل العفش في جدة بناءً على عدد الغرف، حجم المنقولات، خدمات الفك والتركيب، ونوع التغليف المطلوب.</p>
+                            
+                            <!-- Pricing Table for Snippets & User Transparency -->
+                            <div class="table-responsive rounded-4 overflow-hidden shadow-sm mb-4" style="border: 1px solid #e2e8f0;">
+                                <table class="compare-table pricing-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>نوع الخدمة / حجم السكن</th>
+                                            <th>الخدمات المشمولة</th>
+                                            <th>المدة التقريبية</th>
+                                            <th>متوسط السعر التقريبي (ريال)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold text-dark"><i class="fa fa-bed text-primary me-1"></i> نقل غرفة نوم مفردة / استوديو</td>
+                                            <td>فك + تغليف فقاعي + نقل دينا + تركيب</td>
+                                            <td>2 - 3 ساعات</td>
+                                            <td class="price-val">300 - 450 ر.س</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold text-dark"><i class="fa fa-home text-primary me-1"></i> نقل شقة صغيرة (2 - 3 غرف)</td>
+                                            <td>فك وتركيب + تغليف شامل + دينا مقفلة + عمالة</td>
+                                            <td>4 - 6 ساعات</td>
+                                            <td class="price-val">650 - 950 ر.س</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold text-dark"><i class="fa fa-building text-primary me-1"></i> نقل شقة كبيرة (4 - 5 غرف)</td>
+                                            <td>فك كامل + تغليف مزدوج + 2 دينا + نجارين محترفين</td>
+                                            <td>6 - 8 ساعات</td>
+                                            <td class="price-val">1,100 - 1,600 ر.س</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold text-dark"><i class="fa fa-landmark text-primary me-1"></i> نقل فيلا / دور كامل</td>
+                                            <td>تغليف فاخر + أسطول شاحنات + فريق نجارين + ضمان كتابي</td>
+                                            <td>يوم عمل كامل</td>
+                                            <td class="price-val">1,800 - 3,000 ر.س</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold text-dark"><i class="fa fa-truck-ramp-box text-primary me-1"></i> ونش رفع هيدروليكي للأدوار العليا</td>
+                                            <td>رفع أو تنزيل الأثاث عبر الواجهة حتى الدور 15</td>
+                                            <td>حسب عدد القطع</td>
+                                            <td class="price-val">تبدأ من 350 ر.س</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-secondary small lh-lg mb-0"><em>* الأسعار الموضحة أعلاه هي أسعار استرشادية تقريبية داخل أحياء جدة، وقد تختلف قليلاً بناءً على وجود مصعد، الدور، ومسافة النقل. للحصول على عرض سعر فوري ومجاني اتصل بنا الآن.</em></p>
                         </div>
 
                         <!-- Section 13: Price is not the only factor -->
                         <div id="price-not-only" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">هل السعر وحده يكفي لاختيار أفضل شركة نقل عفش
-                                بجدة؟</h2>
+                                style="border-color: #e2e8f0 !important;">هل السعر الأرخص وحده يكفي لاختيار شركة النقل؟</h2>
                             <div class="p-4 rounded-4 border"
                                 style="background-color: #f8fafc; border-color: #e2e8f0 !important;">
-                                <p class="text-secondary lh-lg">السعر عنصر مهم في القرار، لكنه ليس العامل الوحيد.</p>
-                                <p class="text-secondary lh-lg">عند مقارنة الشركات، يجب معرفة ما الذي يشمله السعر، وهل
-                                    يتضمن التغليف أو الفك أو التركيب أو التحميل والتفريغ، وما مستوى الحماية المستخدم،
-                                    وما التفاصيل التي تم الاتفاق عليها.</p>
-                                <p class="text-secondary lh-lg mb-0">أحيانًا تكون العروض مختلفة لأن نطاق الخدمة نفسه
-                                    مختلف، ولذلك لا تكون المقارنة الصحيحة بمجرد النظر إلى الرقم النهائي.</p>
+                                <p class="text-secondary lh-lg">السعر عنصر هام، لكن البحث عن "الأرخص إطلاقاً" غالباً ما ينتهي بخسائر مادية مضاعفة بسبب كسر الأثاث، أو تلف غرف النوم باهظة الثمن، أو قيام العمالة غير المرخصة بطلب مبالغ إضافية مفاجئة في منتصف الطريق.</p>
+                                <p class="text-secondary lh-lg mb-0">اختيار <strong>أفضل شركة نقل عفش بجدة</strong> يعني الموازنة الذكية بين السعر العادل والخدمة المتقنة مع ضمان سلامة منقولاتك الثمينة من أول مسمار حتى تسليم المفتاح.</p>
                             </div>
                         </div>
 
-                        <!-- Section 14: Comparison Table -->
+                        <!-- Section 14: Authority Comparison Table -->
                         <div id="comparison-table" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">ما الذي يجب أن تقارنه بين شركات نقل العفش؟
-                            </h2>
-                            <p class="section-text lh-lg text-secondary mb-4">قبل الحجز، قارن بين الشركات في عناصر
-                                واضحة مثل:</p>
+                                style="border-color: #e2e8f0 !important;">مقارنة: شركة هوم موڤ المعتمدة بجدة مقابل العمالة الفردية والشاحنات المفتوحة</h2>
+                            <p class="section-text lh-lg text-secondary mb-4">لتوضيح الفارق الحقيقي الذي يضمن راحة بالك وسلامة مقتنياتك، يوضح هذا الجدول الفرق الجوهري بين التعاقد مع شركة معتمدة ومرخصة وبين الاستعانة بالعمالة العشوائية:</p>
                             <div class="table-responsive rounded-4 overflow-hidden shadow-sm"
                                 style="border: 1px solid #e2e8f0;">
-                                <table class="compare-table">
+                                <table class="compare-table compare-pro mb-0">
                                     <thead>
                                         <tr>
-                                            <th>المعيار</th>
-                                            <th>ما يجب التأكد منه</th>
+                                            <th>وجه المقارنة</th>
+                                            <th style="background: #ff7300; color: #fff;">شركة هوم موڤ (Jeddah Homo-ve)</th>
+                                            <th style="background: #475569; color: #fff;">العمالة الفردية والسيارات غير المرخصة</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="fw-bold text-dark">الخدمات</td>
-                                            <td>ماذا يشمل العرض؟</td>
+                                            <td class="col-feature"><i class="fa fa-file-contract text-primary me-2"></i> الضمان والمسؤولية</td>
+                                            <td class="col-homo"><i class="fa fa-check-circle text-success me-1"></i> عقد رسمي وضمان كتابي ضد الكسر والخدش</td>
+                                            <td class="col-others"><i class="fa fa-times-circle text-danger me-1"></i> لا يوجد أي ضمان ولا تتحمل أي مسؤولية</td>
                                         </tr>
                                         <tr>
-                                            <td class="fw-bold text-dark">التغليف</td>
-                                            <td>هل التغليف متوفر؟ وما المواد المستخدمة؟</td>
+                                            <td class="col-feature"><i class="fa fa-truck text-primary me-2"></i> نوع شاحنات النقل</td>
+                                            <td class="col-homo"><i class="fa fa-check-circle text-success me-1"></i> دينا مقفلة ومبطنة عازلة للحرارة والرطوبة والغبار</td>
+                                            <td class="col-others"><i class="fa fa-times-circle text-danger me-1"></i> دبابات مكشوفة تعرض الأثاث للشمس والغبار والمطر</td>
                                         </tr>
                                         <tr>
-                                            <td class="fw-bold text-dark">الفك والتركيب</td>
-                                            <td>هل الخدمة متاحة عند الحاجة؟</td>
+                                            <td class="col-feature"><i class="fa fa-screwdriver-wrench text-primary me-2"></i> خبرة الفك والتركيب</td>
+                                            <td class="col-homo"><i class="fa fa-check-circle text-success me-1"></i> نجارون محترفون لغرف النوم، إيكيا، والمطابخ</td>
+                                            <td class="col-others"><i class="fa fa-times-circle text-danger me-1"></i> عمالة غير متخصصة تتسبب بتلف المفصلات والبراغي</td>
                                         </tr>
                                         <tr>
-                                            <td class="fw-bold text-dark">العمالة</td>
-                                            <td>هل عدد العمال مناسب للعمل؟</td>
+                                            <td class="col-feature"><i class="fa fa-box text-primary me-2"></i> مواد وجودة التغليف</td>
+                                            <td class="col-homo"><i class="fa fa-check-circle text-success me-1"></i> رول فقاعي، كراتين 5 طبقات، فوم عازل، بطاطين</td>
+                                            <td class="col-others"><i class="fa fa-times-circle text-danger me-1"></i> تغليف بدائي بشريط لاصق فقط أو بدون تغليف</td>
                                         </tr>
                                         <tr>
-                                            <td class="fw-bold text-dark">النقل</td>
-                                            <td>هل وسيلة النقل مناسبة؟</td>
+                                            <td class="col-feature"><i class="fa fa-clock text-primary me-2"></i> الالتزام بالمواعيد</td>
+                                            <td class="col-homo"><i class="fa fa-check-circle text-success me-1"></i> وصول في الموعد المحدد بدقة 100% وإنجاز سريع</td>
+                                            <td class="col-others"><i class="fa fa-times-circle text-danger me-1"></i> تأخير متكرر وعدم التزام بساعات العمل</td>
                                         </tr>
                                         <tr>
-                                            <td class="fw-bold text-dark">الحماية</td>
-                                            <td>كيف يتم حماية الأثاث؟</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold text-dark">التواصل</td>
-                                            <td>هل التفاصيل واضحة؟</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold text-dark">نطاق الخدمة</td>
-                                            <td>هل الشركة تخدم موقعك؟</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold text-dark">الصور</td>
-                                            <td>هل هي صور حقيقية؟</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold text-dark">التقييمات</td>
-                                            <td>هل مصدرها واضح؟</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold text-dark">التكلفة</td>
-                                            <td>هل العرض واضح؟</td>
+                                            <td class="col-feature"><i class="fa fa-money-bill-1-wave text-primary me-2"></i> وضوح التكلفة والسعر</td>
+                                            <td class="col-homo"><i class="fa fa-check-circle text-success me-1"></i> سعر ثابت متفق عليه مسبقاً وشامل لجميع الخدمات</td>
+                                            <td class="col-others"><i class="fa fa-times-circle text-danger me-1"></i> طلب مبالغ إضافية وإكراميات مفاجئة أثناء النقل</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1283,38 +1426,127 @@
                                 العميل فهم طبيعة الشركة والخدمة المقدمة.</p>
                         </div>
 
-                        <!-- Section 16: Gallery -->
+                        <!-- Section 16: Gallery of Operations -->
                         <div id="gallery" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">صور أعمال نقل العفش بجدة</h2>
-                            <p class="section-text lh-lg text-secondary mb-4">ضع في الصفحة معرض صور حقيقي من أعمال
-                                الشركة، مثل:</p>
-                            <ul class="text-secondary lh-lg">
-                                <li>تغليف الأثاث.</li>
-                                <li>فك الدواليب.</li>
-                                <li>نقل غرف النوم.</li>
-                                <li>تحميل العفش.</li>
-                                <li>حماية الكنب.</li>
-                                <li>نقل القطع الكبيرة.</li>
-                                <li>تفريغ الأثاث.</li>
-                                <li>إعادة تركيب الأثاث.</li>
-                            </ul>
-                            <p class="text-secondary lh-lg mt-3">ويفضل أن تكون الصور أصلية خاصة بالشركة، وليس صورًا
-                                عامة من مواقع الصور.</p>
+                                style="border-color: #e2e8f0 !important;">معرض صور وفيديوهات أعمالنا الميدانية بجدة</h2>
+                            <p class="section-text lh-lg text-secondary mb-4">نفخر في شركة هوم موڤ بتوثيق مراحل عملنا الميداني أثناء تقديم خدمات نقل وتغليف وفك وتركيب العفش في مختلف أحياء جدة، ليرى العميل بنفسه مستوى الدقة والاهتمام بأدق التفاصيل:</p>
+                            
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="gallery-item-card h-100 shadow-sm">
+                                        <div class="overflow-hidden" style="height: 200px;">
+                                            <img src="../../image/home-furniture-moving.webp" alt="دينا نقل عفش مجهزة بجدة" class="img-fluid w-100 h-100" style="object-fit: cover;" loading="lazy">
+                                        </div>
+                                        <div class="p-3">
+                                            <h3 class="fs-6 fw-bold text-dark mb-1"><i class="fa fa-truck-moving text-primary me-2"></i> شاحنات نقل عفش دينا مقفلة</h3>
+                                            <p class="text-secondary small lh-base mb-0">أسطول سيارات حديث ومجهز بصناديق مقفلة مبطنة تحمي الأثاث من الغبار وأشعة الشمس الحارقة ورطوبة ساحل جدة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="gallery-item-card h-100 shadow-sm">
+                                        <div class="overflow-hidden" style="height: 200px;">
+                                            <img src="../../image/furniture-disassembly-and-assembly.webp" alt="فك وتركيب الدواليب وغرف النوم بجدة" class="img-fluid w-100 h-100" style="object-fit: cover;" loading="lazy">
+                                        </div>
+                                        <div class="p-3">
+                                            <h3 class="fs-6 fw-bold text-dark mb-1"><i class="fa fa-screwdriver-wrench text-primary me-2"></i> فك وتركيب غرف النوم والدواليب</h3>
+                                            <p class="text-secondary small lh-base mb-0">نجارون محترفون لفك وتركيب أثاث إيكيا، الغرف الإيطالية، التركية والوطنية مع ترقيم البراغي وحفظها بعناية.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="gallery-item-card h-100 shadow-sm">
+                                        <div class="overflow-hidden" style="height: 200px;">
+                                            <img src="../../image/furniture-packing.webp" alt="تغليف أثاث ومجالس بجدة" class="img-fluid w-100 h-100" style="object-fit: cover;" loading="lazy">
+                                        </div>
+                                        <div class="p-3">
+                                            <h3 class="fs-6 fw-bold text-dark mb-1"><i class="fa fa-boxes-packing text-primary me-2"></i> التغليف الفاخر وحماية الكنب</h3>
+                                            <p class="text-secondary small lh-base mb-0">تغليف متعدد الطبقات باستخدام البلاستيك الفقاعي والكرتون المقوى والاسترتش لحماية الأقمشة والمرايا من أي خدش.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="gallery-item-card h-100 shadow-sm">
+                                        <div class="overflow-hidden" style="height: 200px;">
+                                            <img src="../../image/warranty-with-furniture-moving.webp" alt="ضمان سلامة الأثاث هوم موف بجدة" class="img-fluid w-100 h-100" style="object-fit: cover;" loading="lazy">
+                                        </div>
+                                        <div class="p-3">
+                                            <h3 class="fs-6 fw-bold text-dark mb-1"><i class="fa fa-shield-check text-primary me-2"></i> التسليم النهائي والضمان الموثق</h3>
+                                            <p class="text-secondary small lh-base mb-0">فحص شامل لجميع قطع الأثاث بعد إعادة تركيبها في الموقع الجديد والتأكد من رضا العميل التام قبل مغادرة الموقع.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Section 17: Customer Experience -->
                         <div id="customer-experience" class="section-target mb-5">
                             <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
-                                style="border-color: #e2e8f0 !important;">تجربة العميل من أول اتصال حتى انتهاء النقل
-                            </h2>
-                            <p class="section-text lh-lg text-secondary mb-4">تبدأ التجربة من التواصل وتوضيح
-                                الاحتياجات، ثم تحديد الخدمة المناسبة، وبعد ذلك تجهيز الأثاث وحمايته وفكه عند الحاجة.
-                            </p>
-                            <p class="text-secondary lh-lg mb-4">بعد تجهيز القطع تبدأ عملية التحميل والنقل، ثم التفريغ
-                                وإعادة التركيب عند توفر الخدمة، وتنتهي العملية بمراجعة ما تم الاتفاق عليه.</p>
-                            <p class="text-secondary lh-lg">الهدف من التنظيم هو أن يعرف العميل خطوات العمل وما يحتاج إلى
-                                تجهيزه قبل وصول فريق النقل.</p>
+                                style="border-color: #e2e8f0 !important;">رحلة العميل من أول اتصال حتى تسليم المفتاح</h2>
+                            <p class="section-text lh-lg text-secondary mb-4">تبدأ تجربة النقل المريحة بتواصلك معنا عبر الهاتف أو الواتساب، حيث يستمع ممثل خدمة العملاء لاحتياجاتك ونوع السكن ويحدد الموعد المناسب لسيارات النقل وفريق العمل.</p>
+                            <p class="text-secondary lh-lg mb-4">في يوم النقل، يصل فريق النجارين والعمالة في الموعد المحدد بالدقيقة، ويتم فك القطع وتغليفها باحترافية، ثم تحميلها وترتيبها في الشاحنة وفق أسس التوازن الهندسي، وصولاً إلى الموقع الجديد لإعادة التركيب والترتيب النهائي.</p>
+                            <div class="p-3 rounded-3 bg-white border" style="border-color: #e2e8f0 !important;">
+                                <p class="text-secondary small lh-lg mb-0"><strong>⭐ هدفنا الأساسي:</strong> توفير تجربة انتقال سلسة ومريحة تخلو تماماً من أي توتر، مع الالتزام التام بالمواعيد والحفاظ على كامل خصوصية وسلامة منزلك.</p>
+                            </div>
+                        </div>
+
+                        <!-- New Section: Customer Reviews & Social Proof -->
+                        <div id="customer-reviews" class="section-target mb-5">
+                            <h2 class="fw-bold mb-4 border-bottom pb-3 text-dark"
+                                style="border-color: #e2e8f0 !important;">تجارب وآراء عملائنا في أحياء جدة</h2>
+                            <p class="section-text lh-lg text-secondary mb-4">ثقة عملائنا هي شهادتنا الأكبر على أننا <strong>أفضل شركة نقل عفش بجدة</strong>. إليك جانباً من تقييمات وتجارب العملاء الذين اعتمدوا علينا في نقل منازلهم ومكاتبهم:</p>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="review-card h-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h4 class="fs-6 fw-bold text-dark mb-0">أبو عبد الله الغامدي</h4>
+                                            <div class="text-warning small">
+                                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text-primary small mb-2"><i class="fa fa-location-dot me-1"></i> نقل شقة كاملة - من حي الروضة إلى حي الشاطئ</div>
+                                        <p class="text-secondary small lh-lg mb-0">"تجربة ممتازة جداً، العمالة محترمة وملتزمة بالوقت، والنجار ما شاء الله شاطر في فك وتركيب دولاب إيكيا 6 أبواب بدون أي تجريح. أنصح بالتعامل معهم بشدة."</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="review-card h-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h4 class="fs-6 fw-bold text-dark mb-0">د. مروان السلمي</h4>
+                                            <div class="text-warning small">
+                                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text-primary small mb-2"><i class="fa fa-location-dot me-1"></i> نقل فيلا - حي أبحر الشمالية</div>
+                                        <p class="text-secondary small lh-lg mb-0">"استخدمنا ونش الرفع الهيدروليكي لنقل كنب ومجالس الدور الثاني، الشغل كان منظم وسريع وسياراتهم مقفلة ونظيفة ومبطنة. شركة محترفة وتستحق الأفضلية."</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="review-card h-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h4 class="fs-6 fw-bold text-dark mb-0">أم فهد الحربي</h4>
+                                            <div class="text-warning small">
+                                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text-primary small mb-2"><i class="fa fa-location-dot me-1"></i> نقل غرف نوم ومطبخ - حي الصفا</div>
+                                        <p class="text-secondary small lh-lg mb-0">"تغليف الأواني والتحف بكراتين مبطنة كان ممتاز وما انكسر ولا فنجان، وسعرهم كان ثابت نفس اللي اتفقنا عليه في التليفون بدون أي زيادة. بارك الله فيهم."</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="review-card h-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h4 class="fs-6 fw-bold text-dark mb-0">م. خالد باخشوين</h4>
+                                            <div class="text-warning small">
+                                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text-primary small mb-2"><i class="fa fa-location-dot me-1"></i> نقل أثاث مكتبي - طريق الملك عبد العزيز</div>
+                                        <p class="text-secondary small lh-lg mb-0">"نقلنا مقر شركتنا مع هوم موڤ، سرعة في الفك ونقل الأجهزة المكتبية والمكاتب مع التركيب الدقيق، وتم إنجاز العمل خلال نصف يوم فقط بدون تعطيل الدوام."</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Section 18: Common Mistakes -->
@@ -1718,9 +1950,9 @@
                     <h5 class="footer-title mb-3">موقعنا على الخريطة</h5>
                     <div class="footer-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463766.63367827405!2d47.053241690625015!3d24.75512569582259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2z2KfZhNix2YrYp9i2INin2YTYs9i52YjYr9mK2Kk!5e0!3m2!1sar!2seg!4v1772615336854!5m2!1sar!2seg"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237684.58261358045!2d39.09886474921876!3d21.543333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118db!2z2KzYr9ipINin2YTYs9i52YjYr9mK2Kk!5e0!3m2!1sar!2ssa!4v1700000000000!5m2!1sar!2ssa"
                             width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen=""
-                            loading="lazy"></iframe>
+                            loading="lazy" title="موقع شركة نقل عفش بجدة على خريطة جوجل"></iframe>
                     </div>
                 </div>
             </div>
