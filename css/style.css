@@ -1439,3 +1439,25 @@ footer.footer-section {
   background-color: #ffffff !important;
   color: var(--text-muted) !important;
 }
+
+/* Internal Linking Network Mesh Styles */
+.internal-linking-network {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+}
+
+.internal-link-card {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+}
+
+.internal-link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(255, 115, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+  border-color: #ff7300 !important;
+}
+
+.internal-link-card:hover .fw-bold {
+  color: #ff7300 !important;
+}
