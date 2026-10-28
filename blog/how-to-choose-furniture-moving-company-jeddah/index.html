@@ -39,31 +39,22 @@
         content="10 معايير عملية لاختيار شركة نقل عفش موثوقة بجدة، مع أسئلة قبل التعاقد وعلامات تحذيرية وجدول مقارنة." />
     <meta name="twitter:image" content="https://homo-ve.com/image/logo.webp" />
 
-    <meta name="theme-color" content="#0d6efd" />
+    <meta name="theme-color" content="#050916" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="preload" as="image" href="/image/logo.webp" fetchpriority="high" type="image/webp">
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preload" as="image" href="/image/logoo.webp" fetchpriority="high" type="image/webp">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" media="print"
-        onload="this.media='all'">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        media="print" onload="this.media='all'"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </noscript>
+    <!-- CSS Bootstrap RTL, FontAwesome, AOS & Custom Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/blog.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/image/logoo.webp">
     <link rel="shortcut icon" href="/image/logoo.webp">
     <link rel="apple-touch-icon" href="/image/logoo.webp">
-    <link rel="stylesheet" href="../../css/style.css" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -225,309 +216,11 @@
   }
   </script>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .section-target {
-            scroll-margin-top: 110px;
-        }
-
-        .toc-sidebar {
-            position: sticky;
-            top: 100px;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 22px 18px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            z-index: 10;
-        }
-
-        .toc-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 15px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .toc-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            max-height: calc(85vh - 200px);
-            overflow-y: auto;
-        }
-
-        .toc-list::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .toc-list::-webkit-scrollbar-thumb {
-            background: rgba(226, 107, 2, 0.4);
-            border-radius: 4px;
-        }
-
-        .toc-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #475569;
-            text-decoration: none;
-            padding: 9px 12px;
-            border-radius: 8px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            transition: all 0.25s ease;
-            border-right: 3px solid transparent;
-        }
-
-        .toc-link:hover,
-        .toc-link.active {
-            background: rgba(226, 107, 2, 0.08);
-            color: var(--accent, #e26b02);
-            border-right-color: var(--accent, #e26b02);
-            padding-right: 16px;
-        }
-
-        .toc-link i {
-            width: 18px;
-            text-align: center;
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 991.98px) {
-            .toc-sidebar {
-                position: relative;
-                top: 0;
-                margin-bottom: 30px;
-            }
-
-            .toc-list {
-                max-height: none;
-            }
-        }
-
-        .page-header {
-            position: relative;
-            padding-top: 160px;
-            padding-bottom: 80px;
-            border-bottom: 2px solid var(--accent);
-            overflow: hidden;
-        }
-
-        .hero-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.9));
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .criterion-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-right: 4px solid var(--accent);
-            border-radius: 14px;
-            padding: 22px;
-            margin-bottom: 20px;
-        }
-
-        .criterion-num {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--accent);
-            color: #fff;
-            font-weight: 800;
-            margin-left: 12px;
-            flex-shrink: 0;
-        }
-
-        .compare-table th {
-            background-color: var(--accent);
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .compare-table td {
-            vertical-align: middle;
-        }
-
-        .warning-card {
-            background: #fef2f2;
-            border: 1px solid #fee2e2;
-            border-right: 4px solid #ef4444;
-            border-radius: 12px;
-            padding: 16px 18px;
-            margin-bottom: 12px;
-        }
-
-        .warning-card h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #991b1b;
-            margin-bottom: 6px;
-        }
-
-        .checklist-box {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-            border-radius: 20px;
-            padding: 28px;
-            box-shadow: 0 10px 40px rgba(2, 6, 23, 0.06);
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px 14px;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
-            margin-bottom: 10px;
-            background: #fff;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .checklist-item:hover {
-            border-color: var(--accent);
-            background: rgba(226, 107, 2, 0.03);
-        }
-
-        .checklist-item input {
-            margin-top: 4px;
-            accent-color: var(--accent);
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-
-        .checklist-item label {
-            cursor: pointer;
-            font-weight: 600;
-            color: #334155;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        .checklist-progress {
-            margin-top: 20px;
-            background: #020617;
-            border-radius: 14px;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .progress-bar-custom {
-            height: 10px;
-            background: #1e293b;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 12px 0;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: var(--accent);
-            width: 0%;
-            transition: width 0.4s ease;
-            border-radius: 10px;
-        }
-
-        .progress-score {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--accent);
-        }
-
-        .progress-label {
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
-
-        .dropdown-menu {
-            background-color: #020617;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 10px;
-            margin-top: 15px !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            text-align: right;
-        }
-
-        .dropdown-item {
-            color: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-            padding: 10px 15px;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .dropdown-item:hover {
-            background-color: var(--accent-soft);
-            color: #fff;
-            padding-right: 20px;
-        }
-
-        .dropdown-divider {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-link.dropdown-toggle::after {
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-
-        .message-template {
-            background: #020617;
-            color: #e2e8f0;
-            border-radius: 14px;
-            padding: 22px;
-            font-size: 0.95rem;
-            line-height: 2;
-            font-family: 'Courier New', monospace;
-            direction: rtl;
-        }
-
-        .message-template strong {
-            color: var(--accent);
-        }
-    </style>
 </head>
 
-<body style="background-color: #f8fafc;">
+<body class="blog-page">
 
-    <!-- Floating Buttons -->
+    <!-- Floating Quick Buttons -->
     <a href="https://wa.me/966592425757" class="whatsapp-float" target="_blank" aria-label="تواصل واتساب"
         style="text-decoration: none;">
         <i class="fab fa-whatsapp"></i>
@@ -537,20 +230,19 @@
         <i class="fa-solid fa-phone"></i>
     </a>
 
-    <!-- ======= Navbar ======= -->
-    <nav class="navbar navbar-expand-lg main-navbar fixed-top">
+    <!-- ======= Modern Blog Navbar ======= -->
+    <nav class="navbar navbar-expand-lg blog-navbar fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex flex-column align-items-start gap-1" href="../../">
-                <div class="d-flex align-items-center gap-2">
-                    <img src="https://homo-ve.com/image/logoo.webp" width="120" height="60" loading="eager"
-                        fetchpriority="high" alt="شعار شركة هوم موڤ">
-                    <span class="fw-bold text-white fs-7">هوم موڤ <br />
-                        <small class="fw-normal opacity-75">أفضل شركة نقل عفش وأثاث في جدة</small>
-                    </span>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+                <img src="/image/logoo.webp" width="48" height="48" loading="eager" alt="شعار شركة هوم موڤ" class="logo-img">
+                <div class="d-flex flex-column text-end">
+                    <span class="brand-title">هوم موڤ</span>
+                    <small class="brand-subtitle">نقل عفش وأثاث بجدة</small>
                 </div>
             </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="قائمة التصفح">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -561,77 +253,93 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">خدماتنا</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/services/moving-home-furniture/">نقل عفش وأثاث منزلي</a>
-                            </li>
-                            <li><a class="dropdown-item" href="/services/instant-furniture-moving/">نقل عفش فوري</a>
-                            </li>
-                            <li><a class="dropdown-item" href="/services/moving-furniture-between/">نقل عفش بين
-                                    المدن</a></li>
-                            <li><a class="dropdown-item" href="/services/moving-office-furniture/">نقل أثاث مكتبي</a>
-                            </li>
-                            <li><a class="dropdown-item" href="/services/furniture-disassembly-assembly/">فك وتركيب
-                                    أثاث</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/services/skilled-technical-labor/">عمالة فنية مدربة</a>
-                            </li>
-                            <li><a class="dropdown-item" href="/services/specialized-office-moving-labor/">عمالة نقل
-                                    مكاتب</a></li>
+                            <li><a class="dropdown-item" href="/services/moving-home-furniture/">نقل عفش وأثاث منزلي</a></li>
+                            <li><a class="dropdown-item" href="/services/instant-furniture-moving/">نقل عفش فوري</a></li>
+                            <li><a class="dropdown-item" href="/services/moving-furniture-between/">نقل عفش بين المدن</a></li>
+                            <li><a class="dropdown-item" href="/services/moving-office-furniture/">نقل أثاث مكتبي</a></li>
+                            <li><a class="dropdown-item" href="/services/furniture-disassembly-assembly/">فك وتركيب أثاث</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/services/skilled-technical-labor/">عمالة فنية مدربة</a></li>
+                            <li><a class="dropdown-item" href="/services/specialized-office-moving-labor/">عمالة نقل مكاتب</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item mx-1"><a class="nav-link active" href="/blog/">المدونة</a></li>
                     <li class="nav-item mx-1"><a class="nav-link" href="/about-us/">من نحن</a></li>
-                    <li class="nav-item mx-1"><a class="nav-link" href="/#why-us">لماذا نحن؟</a></li>
                     <li class="nav-item mx-1"><a class="nav-link" href="/service-areas/">نطاق الخدمة</a></li>
                     <li class="nav-item ms-lg-3 mx-1">
-                        <a href="tel:0592425757" class="btn btn-main btn-sm">احجز الآن</a>
+                        <a href="tel:0592425757" class="btn btn-main btn-sm">اتصل الآن</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- ======= Page Header ======= -->
-    <section class="page-header position-relative" style="background-color: #050916;">
-        <img src="/image/logo.webp" alt="اختيار شركة نقل عفش بجدة ومعايير التعاقد" class="hero-img"
-            fetchpriority="high" decoding="async" width="1200" height="630">
-        <div class="hero-overlay"></div>
-
-        <div class="container text-center position-relative hero-content">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center mb-3">
-                    <li class="breadcrumb-item"><a href="../../" class="text-decoration-none text-white">الرئيسية</a>
-                    </li>
-                    <li class="breadcrumb-item">/ <a href="../../blog/"
-                            class="text-decoration-none text-white">المدونة</a></li>
-                    <li class="breadcrumb-item active text-primary fw-bold">اختيار شركة نقل عفش بجدة</li>
+    <!-- ======= Article Hero ======= -->
+    <header class="article-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <nav class="article-breadcrumbs" aria-label="مسار التصفح">
+                <ol>
+                    <li><a href="/"><i class="fa-solid fa-house me-1"></i> الرئيسية</a></li>
+                    <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-left"></i></li>
+                    <li><a href="/blog/">المدونة</a></li>
+                    <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-left"></i></li>
+                    <li class="breadcrumb-current">اختيار شركة نقل عفش بجدة</li>
                 </ol>
             </nav>
 
-            <h1 class="display-4 fw-bold text-white mb-3" data-aos="zoom-in">
-                كيف تختار شركة نقل عفش بجدة؟ 10 معايير مهمة قبل التعاقد
-            </h1>
-
-            <p class="fs-5 text-white-50 mx-auto" style="max-width:760px" data-aos="fade-up" data-aos-delay="100">
-                دليل عملي لاختيار شركة نقل عفش موثوقة بجدة: معايير واضحة، أسئلة يجب طرحها قبل التعاقد، علامات تحذيرية،
-                وجدول مقارنة بين الشركات.
-            </p>
+            <div class="row align-items-center">
+                <div class="col-lg-10">
+                    <span class="article-meta-badge mb-3">
+                        <i class="fa-solid fa-shield-halved"></i> معايير التعاقد المعتمدة 2026
+                    </span>
+                    <h1 class="article-hero-title">
+                        كيف تختار شركة نقل عفش بجدة؟ 10 معايير مهمة قبل التعاقد
+                    </h1>
+                    <p class="article-hero-lead">
+                        دليل عملي لاختيار شركة نقل عفش موثوقة بجدة: معايير واضحة، أسئلة حاسمة قبل التوقيع، علامات تحذيرية لتجنب الشركات غير المرخصة، وجدول مقارنة بين عروض الأسعار.
+                    </p>
+                    <div class="article-meta-bar">
+                        <div class="article-meta-item">
+                            <i class="fa-regular fa-calendar text-warning"></i>
+                            <span>تحديث: 2026</span>
+                        </div>
+                        <div class="article-meta-item">
+                            <i class="fa-regular fa-clock text-warning"></i>
+                            <span>قراءة: 10 دقائق</span>
+                        </div>
+                        <div class="article-meta-item">
+                            <i class="fa-solid fa-user-tie text-warning"></i>
+                            <span>إشراف: خبراء هوم موڤ لنقل الأثاث بجدة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <!-- ======= Main Content ======= -->
-    <section class="section-padding" style="background-color: #f8fafc;">
+    <!-- ======= Main Content Area ======= -->
+    <main class="py-5" style="background-color: #f8fafc;">
         <div class="container">
+
+            <!-- Mobile Table of Contents Toggle -->
+            <button class="toc-mobile-toggle d-lg-none" type="button" id="tocToggleBtn">
+                <span><i class="fa-solid fa-list-ul text-warning me-2"></i> فهرس محتويات المقال</span>
+                <i class="fa-solid fa-chevron-down" id="tocToggleIcon"></i>
+            </button>
+
             <div class="row g-4">
 
-                <!-- RIGHT COLUMN: Sticky TOC -->
-                <div class="col-lg-4 col-xl-3" data-aos="fade-left">
-                    <div class="toc-sidebar">
-                        <div class="toc-title">
-                            <i class="fa fa-list-ul text-primary fs-5"></i>
-                            <span>محتويات الصفحة</span>
+                <!-- RIGHT COLUMN: Sticky Table of Contents -->
+                <aside class="col-lg-4 col-xl-3" data-aos="fade-left">
+                    <div class="toc-sidebar-card" id="tocSidebar">
+                        <div class="toc-card-header">
+                            <h3 class="toc-card-title">
+                                <i class="fa-solid fa-bars-staggered"></i>
+                                <span>محتويات الدليل</span>
+                            </h3>
+                            <span class="badge bg-light text-secondary border">24 قسماً</span>
                         </div>
-                        <ul class="toc-list">
+                        <ul class="toc-nav-list">
                             <li><a href="#choose-intro" class="toc-link active"><i
                                         class="fa fa-circle-info text-primary"></i> <span>مقدمة مباشرة</span></a></li>
                             <li><a href="#choose-why-important" class="toc-link"><i
@@ -2004,11 +1712,44 @@
                                 العثور على الخدمة الأنسب لاحتياجاتك بسعر واضح وشروط مفهومة.</p>
                         </div>
 
+                        <!-- Social Share Bar -->
+                        <div class="article-share-bar">
+                            <div class="article-share-title">
+                                <i class="fa-solid fa-share-nodes text-warning"></i>
+                                <span>شارك هذا الدليل مع من يهمه الأمر:</span>
+                            </div>
+                            <div class="share-btn-group">
+                                <a href="https://api.whatsapp.com/send?text=كيف%20تختار%20شركة%20نقل%20عفش%20بجدة%20-%20https://homo-ve.com/blog/how-to-choose-furniture-moving-company-jeddah/" target="_blank" class="share-btn share-btn-wa">
+                                    <i class="fab fa-whatsapp"></i> واتساب
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?text=كيف%20تختار%20شركة%20نقل%20عفش%20بجدة%20-%20دليل%20شامل&url=https://homo-ve.com/blog/how-to-choose-furniture-moving-company-jeddah/" target="_blank" class="share-btn share-btn-x">
+                                    <i class="fab fa-x-twitter"></i> تويتر (X)
+                                </a>
+                                <button type="button" onclick="copyArticleLink()" class="share-btn share-btn-copy">
+                                    <i class="fa-regular fa-copy"></i> نسخ الرابط
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Author Credentials Box -->
+                        <div class="article-author-card">
+                            <div class="author-avatar">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>فريق خبراء شركة هوم موڤ بجدة</h4>
+                                <div class="author-role">مستشارو النقل اللوجستي وسلامة الأثاث المنزلي</div>
+                                <p>
+                                    فريق متخصص يضم أكثر من 12 عاماً من الخبرة الميدانية في نقل العفش وفك وتركيب غرف النوم والمطابخ وتغليف الأثاث في كافة أحياء شمال ووسط وجنوب جدة. نلتزم بأعلى معايير الشفافية وسلامة الممتلكات.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- ======= CTA Section ======= -->
     <section class="section-padding py-5 border-top" style="border-color: rgba(31, 41, 55, 0.6) !important;">
@@ -2765,7 +2506,36 @@
             });
 
             updateChecklist();
+
+            // Mobile TOC toggle
+            const tocBtn = document.getElementById('tocToggleBtn');
+            const tocSidebar = document.getElementById('tocSidebar');
+            const tocIcon = document.getElementById('tocToggleIcon');
+            if (tocBtn && tocSidebar) {
+                tocBtn.addEventListener('click', function () {
+                    tocSidebar.classList.toggle('show-mobile');
+                    if (tocSidebar.classList.contains('show-mobile')) {
+                        tocIcon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                    } else {
+                        tocIcon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                    }
+                });
+            }
         });
+
+        function copyArticleLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('تم نسخ رابط المقال بنجاح!');
+            }).catch(() => {
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = window.location.href;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                alert('تم نسخ رابط المقال بنجاح!');
+            });
+        }
     </script>
 
 </body>
