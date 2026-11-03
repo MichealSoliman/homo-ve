@@ -28,7 +28,11 @@ RewriteRule ^skilled-technical-labor/?$ /services/skilled-technical-labor/ [R=30
 RewriteRule ^office-furniture-moving/?$ /services/moving-office-furniture/ [R=301,L]
 
 RewriteRule ^moving/?$ /service-areas/ [R=301,L]
-RewriteRule ^moving/al-narjis/?$ /service-areas/al-narjis/ [R=301,L]
+RewriteRule ^moving/al-narjis/?$ /service-areas/hayu-alsalamah/ [R=301,L]
+RewriteRule ^service-areas/al-malqa/?$ /service-areas/hayu-alsafa/ [R=301,L]
+RewriteRule ^service-areas/al-narjis/?$ /service-areas/hayu-alsalamah/ [R=301,L]
+RewriteRule ^service-areas/al-yasmin/?$ /service-areas/hayu-almarwah/ [R=301,L]
+RewriteRule ^service-areas/moving-furniture-al-rimal-district/?$ /service-areas/hayu-alzahra/ [R=301,L]
 
 # =========================
 # 5. حذف index.html

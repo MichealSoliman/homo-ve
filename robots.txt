@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
+Allow: /image/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+
+# Disallow build and development directories
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /src/
 
 Sitemap: https://homo-ve.com/sitemap.xml

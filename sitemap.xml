@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -115,7 +115,7 @@
   </url>
 
   <url>
-    <loc>https://homo-ve.com/service-areas/al-narjis/</loc>
+    <loc>https://homo-ve.com/service-areas/hayu-alsalamah/</loc>
     <lastmod>2026-10-03T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -128,14 +128,14 @@
   </url>
 
   <url>
-    <loc>https://homo-ve.com/service-areas/al-yasmin/</loc>
+    <loc>https://homo-ve.com/service-areas/hayu-almarwah/</loc>
     <lastmod>2026-04-18T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://homo-ve.com/service-areas/al-malqa/</loc>
+    <loc>https://homo-ve.com/service-areas/hayu-alsafa/</loc>
     <lastmod>2026-04-18T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -160,7 +160,7 @@
   </url>
 
   <url>
-    <loc>https://homo-ve.com/service-areas/moving-furniture-al-rimal-district/</loc>
+    <loc>https://homo-ve.com/service-areas/hayu-alzahra/</loc>
     <lastmod>2026-10-22T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -222,4 +222,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+  <!-- Trust & Policy Pages -->
+  <url>
+    <loc>https://homo-ve.com/contact-us/</loc>
+    <lastmod>2026-11-03T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://homo-ve.com/guarantee/</loc>
+    <lastmod>2026-11-03T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://homo-ve.com/privacy-policy/</loc>
+    <lastmod>2026-11-03T10:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://homo-ve.com/terms-conditions/</loc>
+    <lastmod>2026-11-03T10:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
+
